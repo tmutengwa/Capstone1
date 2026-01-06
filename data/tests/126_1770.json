@@ -1,0 +1,32 @@
+[
+  {
+    "week":147,
+    "center_id":126,
+    "meal_id":1770,
+    "checkout_price":427.83,
+    "base_price":485.03,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":577,
+    "region_code":56,
+    "center_type":"TYPE_A",
+    "op_area":2.7,
+    "category":"Biryani",
+    "cuisine":"Indian"
+  },
+  {
+    "week":152,
+    "center_id":126,
+    "meal_id":1770,
+    "checkout_price":485.03,
+    "base_price":484.03,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":577,
+    "region_code":56,
+    "center_type":"TYPE_A",
+    "op_area":2.7,
+    "category":"Biryani",
+    "cuisine":"Indian"
+  }
+]

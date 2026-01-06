@@ -1,0 +1,17 @@
+[
+  {
+    "week":149,
+    "center_id":72,
+    "meal_id":2956,
+    "checkout_price":582.03,
+    "base_price":583.03,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":638,
+    "region_code":56,
+    "center_type":"TYPE_C",
+    "op_area":3.9,
+    "category":"Fish",
+    "cuisine":"Continental"
+  }
+]

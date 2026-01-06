@@ -1,0 +1,17 @@
+[
+  {
+    "week":155,
+    "center_id":74,
+    "meal_id":1247,
+    "checkout_price":445.23,
+    "base_price":445.23,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":702,
+    "region_code":35,
+    "center_type":"TYPE_A",
+    "op_area":2.8,
+    "category":"Biryani",
+    "cuisine":"Indian"
+  }
+]

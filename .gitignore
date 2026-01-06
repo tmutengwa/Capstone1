@@ -1,0 +1,32 @@
+# System files
+.DS_Store
+
+# Virtual Environment
+venv/
+
+# Environment variables
+.env
+*.env
+
+# Docker
+docker-compose.yml
+
+# Documentation and Scripts to ignore
+food_demand_script.txt
+QUICKSTART.md
+lambda.md
+Makefile
+
+# Data files
+data/sample_submission_hSlSoT6.csv
+sample_submission_hSISoT6.csv
+
+# Test artifacts
+data/testsc/
+testc
+
+# Python
+__pycache__/
+*.pyc
+.python-version
+

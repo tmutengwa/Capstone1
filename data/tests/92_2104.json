@@ -1,0 +1,32 @@
+[
+  {
+    "week":149,
+    "center_id":92,
+    "meal_id":2104,
+    "checkout_price":631.53,
+    "base_price":629.53,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":526,
+    "region_code":34,
+    "center_type":"TYPE_C",
+    "op_area":2.9,
+    "category":"Fish",
+    "cuisine":"Continental"
+  },
+  {
+    "week":151,
+    "center_id":92,
+    "meal_id":2104,
+    "checkout_price":629.53,
+    "base_price":629.53,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":526,
+    "region_code":34,
+    "center_type":"TYPE_C",
+    "op_area":2.9,
+    "category":"Fish",
+    "cuisine":"Continental"
+  }
+]

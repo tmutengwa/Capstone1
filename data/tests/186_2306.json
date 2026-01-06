@@ -1,0 +1,32 @@
+[
+  {
+    "week":148,
+    "center_id":186,
+    "meal_id":2306,
+    "checkout_price":242.53,
+    "base_price":335.62,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":649,
+    "region_code":34,
+    "center_type":"TYPE_A",
+    "op_area":3.4,
+    "category":"Pasta",
+    "cuisine":"Italian"
+  },
+  {
+    "week":153,
+    "center_id":186,
+    "meal_id":2306,
+    "checkout_price":335.62,
+    "base_price":335.62,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":649,
+    "region_code":34,
+    "center_type":"TYPE_A",
+    "op_area":3.4,
+    "category":"Pasta",
+    "cuisine":"Italian"
+  }
+]

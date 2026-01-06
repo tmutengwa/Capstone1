@@ -1,0 +1,17 @@
+[
+  {
+    "week":155,
+    "center_id":139,
+    "meal_id":2577,
+    "checkout_price":320.13,
+    "base_price":320.13,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":693,
+    "region_code":34,
+    "center_type":"TYPE_C",
+    "op_area":2.8,
+    "category":"Starters",
+    "cuisine":"Thai"
+  }
+]

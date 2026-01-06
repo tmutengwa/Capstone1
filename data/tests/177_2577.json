@@ -1,0 +1,32 @@
+[
+  {
+    "week":151,
+    "center_id":177,
+    "meal_id":2577,
+    "checkout_price":319.13,
+    "base_price":321.13,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":683,
+    "region_code":56,
+    "center_type":"TYPE_A",
+    "op_area":3.4,
+    "category":"Starters",
+    "cuisine":"Thai"
+  },
+  {
+    "week":154,
+    "center_id":177,
+    "meal_id":2577,
+    "checkout_price":321.13,
+    "base_price":320.13,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":683,
+    "region_code":56,
+    "center_type":"TYPE_A",
+    "op_area":3.4,
+    "category":"Starters",
+    "cuisine":"Thai"
+  }
+]

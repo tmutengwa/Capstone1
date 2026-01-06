@@ -1,0 +1,17 @@
+[
+  {
+    "week":151,
+    "center_id":92,
+    "meal_id":1525,
+    "checkout_price":262.93,
+    "base_price":319.13,
+    "emailer_for_promotion":0,
+    "homepage_featured":0,
+    "city_code":526,
+    "region_code":34,
+    "center_type":"TYPE_C",
+    "op_area":2.9,
+    "category":"Other Snacks",
+    "cuisine":"Thai"
+  }
+]
