@@ -5,8 +5,11 @@ A machine learning project to predict meal demand across fulfillment centers for
 ## Implementation Approach
 
 **sklearn Pipeline with DictVectorizer** 
+
 **Automatic Model Selection** - Compares 7 models, uses the best
+
 **Single Artifact Deployment** - Complete pipeline in one pickle file
+
 **FastAPI Service** - RESTful API for predictions
 
 ## Problem Statement
