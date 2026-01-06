@@ -459,7 +459,7 @@ aws ecr create-repository --repository-name food-demand-api --region us-east-1
 
 1.  **Login to ECR:**
     ```bash
-    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <YOUR_ACCOUNT_ID=955423509456>.dkr.ecr.us-east-1.amazonaws.com
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <YOUR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
     ```
 
 2.  **Build the Image:**
@@ -469,12 +469,12 @@ aws ecr create-repository --repository-name food-demand-api --region us-east-1
 
 3.  **Tag the Image:**
     ```bash
-    docker tag food-demand-api:latest <YOUR_ACCOUNT_ID=955423509456>.dkr.ecr.us-east-1.amazonaws.com/food-demand-api:latest
+    docker tag food-demand-api:latest <YOUR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/food-demand-api:latest
     ```
 
 4.  **Push to ECR:**
     ```bash
-    docker push <YOUR_ACCOUNT_ID=955423509456>.dkr.ecr.us-east-1.amazonaws.com/food-demand-api:latest
+    docker push <YOUR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/food-demand-api:latest
     ```
 
 ## Step 4: Create Lambda Function
@@ -513,14 +513,14 @@ aws ecr create-repository --repository-name food-demand-api --region us-east-1
 Use the Function URL (or API Gateway URL) to test the health endpoint.
 
 ```bash
-curl -i https://jeraevxv6d4mjcsb22ovqlzg3y0lrmtm.lambda-url.us-east-1.on.aws/health
+curl -i https://<function Url>s/health
 ```
 
 Test a prediction:
 
 ```bash
 curl -X 'POST' \
-  'https://jeraevxv6d4mjcsb22ovqlzg3y0lrmtm.lambda-url.us-east-1.on.aws/predict' \
+  'https://<function url>/predict' \
   -H 'Content-Type: application/json' \
   -d '{
   "week": 146,
