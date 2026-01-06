@@ -4,10 +4,10 @@ A machine learning project to predict meal demand across fulfillment centers for
 
 ## Implementation Approach
 
-✅ **sklearn Pipeline with DictVectorizer** - Production-ready ML
-✅ **Automatic Model Selection** - Compares 7 models, uses best
-✅ **Single Artifact Deployment** - Complete pipeline in one pickle file
-✅ **FastAPI Service** - RESTful API for predictions
+**sklearn Pipeline with DictVectorizer** 
+**Automatic Model Selection** - Compares 7 models, uses the best
+**Single Artifact Deployment** - Complete pipeline in one pickle file
+**FastAPI Service** - RESTful API for predictions
 
 ## Problem Statement
 
@@ -68,6 +68,7 @@ food_demand/
 ├── food_demand.ipynb              # Jupyter notebook (EDA & modeling)
 ├── train.py                       # Model training script
 ├── predict.py                     # FastAPI prediction service
+├── app.py                         # Streamlit web interface
 ├── requirements.txt               # Python dependencies
 ├── Dockerfile                     # Docker configuration
 ├── .dockerignore                  # Docker ignore file
@@ -77,6 +78,7 @@ food_demand/
 ├── feature_cols.pkl              # Feature columns (generated)
 ├── label_encoders.pkl            # Label encoders (generated)
 └── submission.csv                # Predictions (generated)
+
 ```
 
 ## Installation
@@ -432,6 +434,9 @@ RUN pip install --upgrade pip && \
 COPY predict.py .
 COPY final_model.pkl .
 COPY feature_cols.pkl .
+
+# Set permissions
+RUN chmod +r predict.py final_model.pkl feature_cols.pkl
 
 # Run the application
 CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "8000"]
