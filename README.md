@@ -155,10 +155,10 @@ This will:
 Start the FastAPI server:
 
 ```bash
-uvicorn predict:app --host 0.0.0.0 --port 8000 --reload
+uvicorn predict:app --host 0.0.0.0 --port 8080 --reload
 ```
 
-The API will be available at `http://localhost:8000`
+The API will be available at `http://localhost:8080`
 
 #### Option B: Run with Docker
 
@@ -172,24 +172,24 @@ The API will be available at `http://localhost:8000`
    docker run -p 8000:8000 food-demand-api
    ```
 
-The API will be available at `http://localhost:8000`
+The API will be available at `http://localhost:8080`
 
 ### 4. Access API Documentation
 
 Once the service is running, visit:
-- **Interactive API docs**: http://localhost:8000/docs
-- **Alternative docs**: http://localhost:8000/redoc
+- **Interactive API docs**: http://localhost:8080/docs
+- **Alternative docs**: http://localhost:8080/redoc
 
 ## API Endpoints
 
 ### Health Check
 ```bash
-curl http://localhost:8000/
+curl http://localhost:8080/
 ```
 
 ### Single Prediction
 ```bash
-curl -X POST "http://localhost:8000/predict" \
+curl -X POST "http://localhost:8080/predict" \
   -H "Content-Type: application/json" \
   -d '{
     "week": 146,
@@ -220,7 +220,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ### Batch Predictions
 ```bash
-curl -X POST "http://localhost:8000/predict_batch" \
+curl -X POST "http://localhost:8080/predict_batch" \
   -H "Content-Type: application/json" \
   -d '{
     "predictions": [
@@ -441,8 +441,15 @@ COPY feature_cols.pkl .
 # Set permissions
 RUN chmod +r predict.py final_model.pkl feature_cols.pkl
 
+# Expose port
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8080/health || exit 1
+
 # Run the application
-CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "8080"]
 ```
 
 ## Step 2: Create an ECR Repository
@@ -489,10 +496,10 @@ aws ecr create-repository --repository-name food-demand-api --region us-east-1
 ## Step 5: Configure Lambda
 
 1.  **Configuration** tab -> **General configuration** -> **Edit**.
-    *   **Memory:** Increase to at least 1024 MB (ML models need memory).
-    *   **Timeout:** Increase to 30 seconds or more.
+    *   **Memory:** Increase to at least 3008 MB (ML models need memory).
+    *   **Timeout:** Increase to 90 seconds or more.
 2.  **Configuration** tab -> **Environment variables**.
-    *   Add any necessary env vars.
+    *   Add any necessary env vars- Key: PORT, Value: 8080
 
 ## Step 6: Expose via Function URL or API Gateway
 
